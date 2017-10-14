@@ -12,7 +12,7 @@ RSpec.describe Api::V1::UsersController, type: :request do
     end
 
     context 'with invalid attributes' do
-      it 'creates new user' do
+      it 'returns errors' do
         user_attributes[:email] = nil
         post '/api/v1/users', params: { user: user_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
