@@ -12,7 +12,7 @@ RSpec.describe Api::V1::UserTokenController, type: :request do
       end
 
       it 'returns http created' do
-        expect(response).to have_http_status(:created)
+        expect(response).to be_created
       end
 
       it 'returns token' do

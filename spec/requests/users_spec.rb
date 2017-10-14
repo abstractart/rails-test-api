@@ -7,7 +7,7 @@ RSpec.describe Api::V1::UsersController, type: :request do
     context 'with valid attributes' do
       it 'creates new user' do
         post '/api/v1/users', params: { user: user_attributes }
-        expect(response).to have_http_status(:created)
+        expect(response).to be_created
       end
     end
 
