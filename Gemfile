@@ -46,6 +46,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'factory_girl_rails'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.6'
   gem 'selenium-webdriver'
 end
@@ -58,8 +60,6 @@ group :development do
   gem 'bundler-audit'
 
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'pry-byebug'
-  gem 'pry-rails'
   # Spring speeds up development by
   # keeping your application running in the background.
   # Read more: https://github.com/rails/spring
