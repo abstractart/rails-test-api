@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required" : [
+    "id",
+    "text",
+    "created_at",
+    "updated_at",
+    "author_nickname"
+  ],
+  "properties" : {
+    "id" : { "type" : "integer" },
+    "text" : { "type" : "string" },
+    "created_at" : { "type" : "string", "format": "date-time" },
+    "updated_at" : { "type" : "string", "format": "date-time" },
+    "author_nickname" : { "type" : "string" }
+  }
+}

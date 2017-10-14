@@ -65,4 +65,5 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.include JsonHelpers,    type: :request
   config.include RequestHelpers, type: :request
+  config.include SerializerSpecHelper, type: :serializer
 end
