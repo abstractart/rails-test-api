@@ -2,11 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::UserTokenController, type: :request do
   describe 'POST #user_token' do
-    let(:login_attributes) { { auth: attributes_for(:user) } }
-
-    before do
-      create(:user)
-    end
+    let!(:user) { create(:user) }
+    let(:user_attributes)  { { email: user.email, password: user.password } }
+    let(:login_attributes) { { auth: user_attributes } }
 
     context 'when login credentials right' do
       before do
