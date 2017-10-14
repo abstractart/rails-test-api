@@ -29,4 +29,8 @@ RSpec.describe User, type: :model do
     it { expect(user).to_not allow_value('foo@bar').for(:email) }
     it { expect(user).to_not allow_value('foobar').for(:email) }
   end
+
+  describe 'ActiveRecord associations' do
+    it { should have_many(:messages).dependent(:destroy) }
+  end
 end

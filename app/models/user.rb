@@ -1,6 +1,9 @@
 # User model
 class User < ApplicationRecord
   has_secure_password
+
+  has_many :messages, dependent: :destroy
+
   # http://www.aidanf.net/posts/validating-emails-in-rails
   EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
