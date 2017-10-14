@@ -5,6 +5,11 @@ module Api
     class MessagesController < ApiController
       before_action :authenticate_user
 
+      def index
+        messages = Message.all.includes(:user)
+        render json: messages
+      end
+
       def create
         message = current_user.messages.build(message_params)
 
