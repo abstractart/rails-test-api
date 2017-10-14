@@ -6,6 +6,9 @@ Metrics/MethodLength:
   Exclude:
     - db/migrate/*.rb
 
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+
 Style/Documentation:
   Exclude:
     - db/migrate/*.rb
