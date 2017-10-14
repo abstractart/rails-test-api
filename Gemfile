@@ -37,6 +37,9 @@ gem 'bcrypt', '~> 3.1.7'
 # JWT Auth
 gem 'knock'
 
+# Secure from brute force
+gem 'rack-attack'
+
 # Linters
 gem 'rails_best_practices'
 gem 'rubocop', require: false
