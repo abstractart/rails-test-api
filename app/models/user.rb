@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   validates :email,    presence: true, uniqueness: { case_sensitive: false },
                        format: { with: EMAIL_REGEX }
-  validates :nickname, presence: true, length: { minimum: 8, maximum: 32 }
+  validates :nickname, presence: true, uniqueness: { case_sensitive: false },
+                       length: { minimum: 8, maximum: 32 }
   validates :password, presence: true, length: { minimum: 8 }, on: :create
 end
