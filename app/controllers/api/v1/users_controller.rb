@@ -5,7 +5,7 @@ module Api
       def create
         user = User.new(user_params)
         if user.save
-          render json: {}, status: :created
+          render json: '', status: :created
         else
           render_errors(user)
         end

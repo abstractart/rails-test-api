@@ -9,6 +9,7 @@ RSpec.describe Api::V1::VotesController, type: :request do
     context 'normal situation' do
       it 'creates new vote' do
         post "/api/v1/messages/#{message.id}/votes", headers: headers
+
         expect(response).to be_created
       end
     end
