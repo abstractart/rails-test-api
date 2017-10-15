@@ -3,10 +3,12 @@ module Api
     # Controller for creating messages
     # Authentication required
     class MessagesController < ApiController
-      before_action :authenticate_user
+      before_action :authenticate_user, only: :create
 
       def index
-        messages = Message.all.includes(:user)
+        messages = Message.by_create_time.page(params[:page]).includes(:user)
+
+        response.headers['X-Total-Pages-Count'] = messages.total_pages
         render json: messages
       end
 

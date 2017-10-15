@@ -5,9 +5,18 @@ RSpec.describe Api::V1::MessagesController, type: :request do
   let(:headers) { { 'Authorization': auth_token(user) } }
 
   describe 'GET api/v1/messages' do
-    it 'returns messages' do
-      create_list(:message, 5)
-      get '/api/v1/messages', headers: headers
+    before do
+      create_list(:message, 15)
+    end
+    it 'returns 10 last messages' do
+      get '/api/v1/messages'
+
+      expect(response).to be_success
+      expect(json.length).to eq(10)
+    end
+
+    it 'returns first 5 messages' do
+      get '/api/v1/messages/?page=2'
 
       expect(response).to be_success
       expect(json.length).to eq(5)
