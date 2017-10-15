@@ -1,17 +1,33 @@
 {
   "type": "object",
-  "required" : [
+  "required": [
     "id",
     "text",
     "created_at",
-    "updated_at",
-    "author_nickname"
+    "updated_at"
   ],
-  "properties" : {
-    "id" : { "type" : "integer" },
-    "text" : { "type" : "string" },
-    "created_at" : { "type" : "string", "format": "date-time" },
-    "updated_at" : { "type" : "string", "format": "date-time" },
-    "author_nickname" : { "type" : "string" }
+  "properties": {
+    "user": {
+      "type": "object",
+      "required": [
+        "id",
+        "email",
+        "nickname"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "text": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
   }
 }

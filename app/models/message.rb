@@ -5,7 +5,13 @@ class Message < ApplicationRecord
                    length: { minimum: 8, maximum: 140 }
   has_many :votes
 
-  def author_nickname
-    user.nickname
+  def self.time_range(range)
+    if range == 'week'
+      Message.where(created_at: 1.week.ago..Time.zone.now)
+    elsif range == 'day'
+      Message.where(created_at: 1.day.ago..Time.zone.now)
+    else
+      Message.all
+    end
   end
 end
