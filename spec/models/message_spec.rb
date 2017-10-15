@@ -10,11 +10,4 @@ RSpec.describe Message, type: :model do
   describe 'ActiveRecord associations' do
     it { should belong_to(:user).counter_cache(:count_of_messages) }
   end
-
-  describe 'methods' do
-    let(:message) { create(:message) }
-    it 'return authors nickname ' do
-      expect(message.author_nickname).to equal(message.user.nickname)
-    end
-  end
 end
