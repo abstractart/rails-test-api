@@ -9,6 +9,7 @@ capybara-*.html
 /coverage/
 /spec/tmp
 /node_modules
+/linters
 *.orig
 rerun.txt
 pickle-email-*.html
