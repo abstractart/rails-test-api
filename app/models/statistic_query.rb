@@ -6,8 +6,9 @@ class StatisticQuery
 
   def top_writers
     columns = 'users.nickname, users.count_of_messages'
+    order_rule = 'users.count_of_messages'
 
-    relation.joins(:user).select(columns).limit(5).distinct
+    relation.joins(:user).select(columns).order(order_rule).limit(5).distinct
   end
 
   def top_popular
