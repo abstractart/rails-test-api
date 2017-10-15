@@ -8,7 +8,7 @@ RSpec.describe Message, type: :model do
   end
 
   describe 'ActiveRecord associations' do
-    it { should belong_to(:user) }
+    it { should belong_to(:user).counter_cache(:count_of_messages) }
   end
 
   describe 'methods' do
