@@ -1,0 +1,7 @@
+  ul.list-inline
+    li.list-group-item
+      == link_to 'All',  stats_path
+    li.list-group-item
+      == link_to 'Day',  stats_path({ range: 'day' })
+    li.list-group-item
+      == link_to 'Week', stats_path({ range: 'week' })

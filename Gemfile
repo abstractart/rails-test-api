@@ -37,6 +37,9 @@ gem 'bcrypt', '~> 3.1.7'
 # JWT Auth
 gem 'knock'
 
+# Slim
+gem 'slim-rails'
+
 # Secure from brute force
 gem 'rack-attack'
 
