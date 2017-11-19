@@ -1,0 +1,10 @@
+h1 Writers by AVG rating
+table.table-bordered
+  th Nickname
+  th Avg Rating
+  - top_avg.each do |tw|
+    tr
+      td
+        = tw.nickname
+      td
+        = tw.rating.round(3)

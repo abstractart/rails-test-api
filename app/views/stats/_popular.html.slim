@@ -1,0 +1,13 @@
+h1 Popular
+table.table-bordered align="center"
+  th Nickname
+  th Message text
+  th Votes count
+  - top_popular.each do |tw|
+    tr
+      td
+        = tw.nickname
+      td
+        = tw.text
+      td
+        = tw.count_of_votes

@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## API Specification
 
-Things you may want to cover:
+[Docs](api_doc.md)
 
-* Ruby version
+## Environment
 
-* System dependencies
+I prefer to use RVM.
 
-* Configuration
+### Ruby version
 
-* Database creation
+RVM creates gemset based on `.ruby-version` and `.ruby-gemset`: `2.4.2@httplab-rails-api`.
 
-* Database initialization
+* Ruby 2.4.2
+* Rails 5.1.4
 
-* How to run the test suite
+## Dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+* PostgreSQL 9.4+
 
-* Deployment instructions
+## Configuration
 
-* ...
+`rvm gemset create httplab-rails-api && bundle install && rails db:setup && yarn`
+
+## Linters (code analyzers)
+
+```bash
+chmod +x linters.sh
+./linters.sh
+```

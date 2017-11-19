@@ -1,0 +1,10 @@
+h1 Top Writers
+table.table-bordered align="center"
+  th Nickname
+  th Messages
+  - top_writers.each do |tw|
+    tr
+      td
+        = tw.nickname
+      td
+        = tw.count_of_messages

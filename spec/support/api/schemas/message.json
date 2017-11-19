@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "text",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "user": {
+      "type": "object",
+      "required": [
+        "id",
+        "email",
+        "nickname"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "text": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
