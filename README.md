@@ -1,5 +1,5 @@
 # README
-
+[![Build Status](https://travis-ci.org/abstractart/rails-test-api.svg?branch=master)](https://travis-ci.org/abstractart/rails-test-api)
 ## Task
 [task.md](task.md)
 
