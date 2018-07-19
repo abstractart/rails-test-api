@@ -2,6 +2,11 @@ language: ruby
 rvm:
   - 2.4.2
 
+services:
+  - elasticsearch
+before_script:
+  - sleep 5 # To make sure Elasticsearch instance is ready
+
 script:
   - bin/rake db:create  RAILS_ENV=test
   - bin/rake db:migrate RAILS_ENV=test

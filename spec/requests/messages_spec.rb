@@ -44,4 +44,14 @@ RSpec.describe Api::V1::MessagesController, type: :request do
       end
     end
   end
+
+  describe 'GET api/v1/messages/search', search: true do
+    it 'returns some stuff' do
+      create(:message, :reindex, user: user, text: 'Text ' + FFaker::Lorem.sentence(5))
+      get '/api/v1/messages/search', params: { query: 'Text' }
+      
+      expect(response).to have_http_status(:ok)
+      expect(json).not_to be_empty
+    end
+  end
 end

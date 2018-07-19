@@ -12,6 +12,16 @@ module Api
         render json: messages
       end
 
+      def search
+        messages = Message.search(
+          params[:query],
+          page: params[:page],
+          per_page: Message::PAGE_SIZE
+        )
+        
+        render json: messages
+      end
+
       def create
         message = current_user.messages.build(message_params)
 
