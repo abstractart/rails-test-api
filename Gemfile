@@ -39,11 +39,6 @@ gem 'slim-rails'
 # Secure from brute force
 gem 'rack-attack'
 
-# Linters
-gem 'rails_best_practices'
-gem 'rubocop', require: false
-gem 'rubycritic', require: false
-
 gem 'ffaker'
 
 # Pagination
@@ -81,6 +76,11 @@ group :development do
   # Access an IRB console on exception pages
   # or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+
+  # Linters
+  gem 'rails_best_practices', require: false
+  gem 'rubocop', require: false
+  gem 'rubycritic', require: false
 end
 
 group :test do
