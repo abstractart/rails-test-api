@@ -1,6 +1,9 @@
 # Message model
 class Message < ApplicationRecord
-  paginates_per 10
+  searchkick
+  PAGE_SIZE = 10
+
+  paginates_per PAGE_SIZE
 
   validates :text, presence: true,
                    length: { minimum: 8, maximum: 140 }

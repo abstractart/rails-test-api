@@ -21,10 +21,11 @@ RVM creates gemset based on `.ruby-version` and `.ruby-gemset`: `2.4.2@httplab-r
 ## Dependencies
 
 * PostgreSQL 9.4+
+* ElasticSearch 5
 
 ## Configuration
 
-`rvm gemset create httplab-rails-api && bundle --without production && rails db:setup && yarn`
+`bundle --without production && rails db:setup && yarn`
 
 ## Linters (code analyzers)
 
