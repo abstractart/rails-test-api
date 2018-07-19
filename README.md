@@ -21,6 +21,7 @@ RVM creates gemset based on `.ruby-version` and `.ruby-gemset`: `2.4.2@httplab-r
 ## Dependencies
 
 * PostgreSQL 9.4+
+* ElasticSearch 5
 
 ## Configuration
 
