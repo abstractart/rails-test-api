@@ -25,7 +25,7 @@ RVM creates gemset based on `.ruby-version` and `.ruby-gemset`: `2.4.2@httplab-r
 
 ## Configuration
 
-`rvm gemset create httplab-rails-api && bundle --without production && rails db:setup && yarn`
+`bundle --without production && rails db:setup && yarn`
 
 ## Linters (code analyzers)
 
