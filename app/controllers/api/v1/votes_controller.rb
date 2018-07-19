@@ -10,7 +10,7 @@ module Api
         vote = Vote.new(user: current_user, message: @message)
 
         if vote.save
-          render json: '', status: :created
+          head :created
         else
           render_errors(vote)
         end
